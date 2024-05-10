@@ -6,7 +6,6 @@ let movieData = {};
 let isModalOpen = false;
 
 
-// SEARCH MOVIES
 function searchTerm(event) {
   const movieId = event.target.value;
   getMovies(movieId);
@@ -15,7 +14,6 @@ function searchTerm(event) {
 }
 
 
-// RENDER MOVIES
 function renderMovies() {
   if (movieData.Search) {
     movieListEl.innerHTML = movieData.Search
