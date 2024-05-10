@@ -1,0 +1,11 @@
+*{
+    background-color: blueviolet;
+}
+NavList{
+    justify-content: space-between;
+    background-color: black;
+
+}
+ ul {
+    color: red;
+ }
