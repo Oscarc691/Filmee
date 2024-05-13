@@ -108,7 +108,7 @@ function toggleModal() {
 
 
 function nextSlide() {
-  currentIndex = (currentIndex + 1) % items.length;
+  currentIndex = (currentIndex + 1) % carousel-items.length;
   updateCarousel();
 }
 
