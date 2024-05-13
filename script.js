@@ -105,9 +105,13 @@ function toggleModal() {
   document.body.classList += " modal--open";
 }
 
-// Function to rotate the carousel
-function rotateCarousel() {
-  rotateY = -currentIndex * 60; /* Adjust the rotation angle as desired */
-  carouselInner.style.transform = `translateZ(-200px) rotateY(${rotateY}deg)`;
+
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % items.length;
+  updateCarousel();
 }
 
+setInterval(nextSlide, 3000); // Rotate every 3 seconds
+
+updateCarousel();
