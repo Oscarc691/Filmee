@@ -1,9 +1,14 @@
 
 const movieListEl = document.querySelector(".movie__list");
 const searchValue = document.querySelector(".search__value");
+const carousel = document.querySelector('.carousel');
+const carouselInner = document.querySelector('.carousel-inner');
+const carouselItems = document.querySelectorAll('.carousel-item');
 const n = 6;
 let movieData = {};
 let isModalOpen = false;
+let currentIndex = 0;
+let rotateY = 0;
 
 
 function searchTerm(event) {
@@ -99,3 +104,10 @@ function toggleModal() {
   isModalOpen = true;
   document.body.classList += " modal--open";
 }
+
+// Function to rotate the carousel
+function rotateCarousel() {
+  rotateY = -currentIndex * 60; /* Adjust the rotation angle as desired */
+  carouselInner.style.transform = `translateZ(-200px) rotateY(${rotateY}deg)`;
+}
+

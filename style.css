@@ -27,7 +27,7 @@ li {
 }
 
 body {
-  background-color: orange;
+  background-color: olive;
 }
 
 .modal--open nav,
@@ -64,6 +64,7 @@ body {
 .nav__link--list {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .nav__link {
@@ -92,7 +93,49 @@ body {
   margin-bottom: 12px;
   background-color: white;
 }
+.carousel {
+  box-shadow: 10 10 10 10;
+  display: flex;
+  overflow: hidden;
+  animation: carouselAnimation 7s linear infinite alternate;
+ 
+  perspective: 1000px;
+}
+.carousel-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+.carousel-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ccc; 
+  transform-style: preserve-3d;
+  
+}
 
+@keyframes carouselAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-100%);
+  }
+  40% {
+    transform: translateX(-200%);
+  }
+  60% {
+    transform: translateX(-300%);
+  }
+  80% {
+    transform: translateX(-400%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 input {
   flex-grow: 2;
   border: none;
